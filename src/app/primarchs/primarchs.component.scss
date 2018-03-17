@@ -1,0 +1,21 @@
+.primarch-list {
+    .primarch-card {
+        display: flex;
+     
+        a {
+            img {
+                width: 200px;
+            }
+        }
+        .primarch-details {
+            display: block;
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            border: 3px solid teal;
+            background-color: rgba(blue, 0.4);
+            transition: width 1s ease;
+        }
+    }
+}

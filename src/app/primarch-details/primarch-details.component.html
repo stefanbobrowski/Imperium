@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="primarch" *ngIf="primarch">
+        <img src="assets/primarchs/{{ primarch.url_img }}">
+        <h1> Name: {{ primarch.name }}</h1>
+        <p> {{ primarch.alias }}</p>
+        <p> {{ primarch.legionNumeral }}. {{ primarch.legionName }}</p>
+        <p>Weapon of choice: {{ primarch.weapon }}</p>
+        <div [innerHtml]="primarch.description">Hi</div>
+    
+        <h2>Appears in these novels:</h2>
+        <div *ngFor="let novel of novelsPrimarchIn; let i = index">
+            <p><a [routerLink]="['/novels', novel]"> {{ primarch.novels[i] }}</a></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <h1>Register</h1>
+    <div class="register-form">
+        <label for="userName">Username</label>
+        <input type="text" name="username" [(ngModel)]="this.newUser.username" [ngModelOptions]="{standalone: true}" required/>
+        <label for="password">Password</label>
+        <input type="password" name="password" [(ngModel)]="this.newUser.password" [ngModelOptions]="{standalone: true}" required/>
+        <button (click)="registerUser()">Register</button>
+    </div>
+</div>
+
+<div *ngIf="user">
+    <p>Congrats {{ user.username }} has joined the fray!</p>
+</div>

@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <h1>Novel List</h1>
+    <div class="full-listing" *ngIf="novels">
+        <div *ngFor="let novel of novels" class="listing-item"> 
+            <a [routerLink]="['/novels', novel.url_title]">
+                <img src="assets/novels/{{ novel.url_img }}">
+            </a>
+            <div class="item-details">
+                <a [routerLink]="['/novels', novel.url_title]"> {{ novel.title }}</a>
+                <p><i>{{ novel.subtitle }}</i></p>
+                <p>{{ novel.author }}</p>
+                <p>{{ novel.release }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

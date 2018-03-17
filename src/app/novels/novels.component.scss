@@ -1,0 +1,20 @@
+.full-listing {
+    display: flex;
+    flex-wrap: wrap;
+
+	.listing-item {
+		a img {
+            max-width: 200px;
+            
+           
+        }
+        
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+           
+        }
+	}
+}

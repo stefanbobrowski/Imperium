@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <h1>Primarch List</h1>
+    <div class="primarch-list" *ngIf="primarchs">
+        <div *ngFor="let primarch of primarchs" class="primarch-card">
+            <a [routerLink]="['/primarchs', primarch.url_name]"> 
+                <img src="assets/primarchs/{{ primarch.url_img }}" class="primarch-cover">
+            </a>
+            <div class="primarch-details">
+                <a [routerLink]="['/primarchs', primarch.url_name]"> {{ primarch.name }}</a>
+                <p>{{ primarch.legionNumeral }} legion </p>
+                <p>{{ primarch.legionName }}</p>
+            </div>
+        </div>
+    </div>
+</div>

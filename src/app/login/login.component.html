@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <h1>Login</h1>
+    <div class="login-form">
+            <label for="username">Username</label>
+            <input type="text" name="username" [(ngModel)]="this.loginUser.username" [ngModelOptions]="{standalone: true}">
+            <label for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="this.loginUser.password" [ngModelOptions]="{standalone: true}">
+            <button (click)="login()">Login</button>
+    </div>
+
+    <div *ngIf="user">
+        <p>Congrats {{ user.username }} has logged in! Here is the mongo ID to prove: {{ user._id }}</p>
+    </div>
+    
+    <div *ngIf="error">
+        <p> {{ error }}</p>
+    </div>
+</div>
+
+
+
+<app-register></app-register>

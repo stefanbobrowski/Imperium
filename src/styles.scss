@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+/* CSS RESET */
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: normal;
+}
+::-webkit-input-placeholder {
+	color:#aaa;
+	font-weight: 300;
+}
+::-moz-placeholder {
+	color:#aaa;
+	font-weight: 300;
+}
+:-ms-input-placeholder {
+	color:#aaa;
+	font-weight: 300;
+}
+input:-moz-placeholder {
+	color:#aaa;
+	font-weight: 300;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* Global Styles */
+
+
+$gold1: #a67c00;
+$gold2: #bf9b30;
+$gold3: #ffbf00;
+$gold4: #ffcf40;
+$gold5: #ffdc73;
+
+body {
+	font-family: 'Spectral SC', serif;
+	background-color: rgba($gold2, 0.5);
+}
+
+a {
+    text-decoration: none;
+	color:$gold3;
+	transition: all 0.4s ease;
+	&:hover {
+		color: $gold5;
+	}
+}
+header {
+	display: flex;
+	background-color: rgb(202, 155, 35);
+
+
+	.header-title {
+		font-size: 40px;
+		font-weight: 600;
+		color: $gold1;
+		text-shadow: 0px -1px 0px rgba(0,0,0,.5); /* 50% black coming from the top */
+	}
+	
+
+	
+	nav {
+		display: flex;
+		align-items: center;
+		max-width: 1090px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 10px 0;
+
+		a {
+			margin-right: 15px;
+			font-size: 20px;
+			font-weight: 600;
+			color: $gold1;
+			text-shadow: 0px -1px 0px rgba(0,0,0,.5); /* 50% black coming from the top */
+			
+			&.header-logo {
+				display: block;
+				width: 140px;
+		
+				img {
+					width: 100%;
+					transition: all 0.4s ease;
+
+					&:hover {
+						box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+					}
+				}
+
+				
+			}
+
+			&:last-of-type {
+				margin-left: auto;
+			}
+
+			&:hover {
+				color: $gold3;
+			}
+		}
+	}
+}
+
+
+
+.wrapper {
+	width: 100%;
+	max-width: 1090px;
+    border: 1px blue;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(blue, 0.5);
+}
+

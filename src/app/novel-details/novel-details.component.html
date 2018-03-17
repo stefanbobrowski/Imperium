@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div *ngIf="novel">
+        <h1> Title: {{ novel.title }}</h1>
+        <h2> Author: {{ novel.author }}</h2>
+        <img src="assets/novels/{{ novel.url_img }}">
+        <h3> Here is all about this novel </h3>
+        <div [innerHtml]="novel.description">Hi</div>
+
+        <h3>Primarchs in this novel:</h3>
+        <div *ngFor="let primarch of novel.primarchs; let i = index">
+          <a [routerLink]="['/primarchs', primarchsInNovel[i]]"> {{ primarch }}</a>
+        </div>
+
+    </div>
+
+    <!-- <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=imperium01f-20&marketplace=amazon&region=US&placement=1849707448&asins=1849707448&linkId=96fddd93c3c4a1684bf6f13bbc194082&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe> -->
+
+
+</div>
